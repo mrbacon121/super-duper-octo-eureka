@@ -1,0 +1,1 @@
+(function(){new MutationObserver(e=>{for(let t=0;t<e.length;t++)e[t].addedNodes.forEach(e=>{e.nodeName===`SCRIPT`&&(e.src||e.textContent.toLowerCase().includes(`frvr`))&&(window.loadedScript=!0,e.parentNode?.removeChild(e))})}).observe(document,{attributes:!0,characterData:!0,childList:!0,subtree:!0})})();
