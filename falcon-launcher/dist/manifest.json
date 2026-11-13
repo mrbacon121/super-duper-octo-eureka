@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Falcon Loader",
+  "description": "try to take over the world!",
+  "version": "1.0.0",
+  "action": {},
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "webNavigation",
+    "scripting",
+    "declarativeNetRequest",
+    "proxy",
+    "webRequest",
+    "webRequestAuthProvider"
+  ],
+  "host_permissions": [
+    "*://moomoo.io/*",
+    "*://*.moomoo.io/*",
+    "https://challenges.cloudflare.com/*",
+    "https://falcon-loader.onrender.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "resources": [
+        "src/remove.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
